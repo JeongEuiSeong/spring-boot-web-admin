@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>user</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+</head>
+<body>
+{{>layout/header}}
+<h1>스프링 부트 웹 시작하기</h1>
+<div class="col-md-12">
+    <!-- 목록 출력 영역 -->
+    <table class="table table-horizontal table-bordered">
+        <thead class="thead-strong">
+        <tr>
+            <th>아이디</th>
+            <th>비밀번호</th>
+        </tr>
+        </thead>
+        <tbody id="tbody">
+        {{#member}}
+            <tr>
+                <td>{{USERID}}</td>
+                <td>{{PWD}}</td>
+            </tr>
+        {{/member}}
+        </tbody>
+    </table>
+</div>
+{{>layout/footer}}
+</body>
+</html>
